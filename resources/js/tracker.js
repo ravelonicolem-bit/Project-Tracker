@@ -1,5 +1,4 @@
-const formatCurrency = (value) =>
-    new Intl.NumberFormat(undefined, { style: 'currency', currency: 'USD' }).format(value);
+const formatCurrency = (value) => new Intl.NumberFormat(undefined, { style: 'currency', currency: 'USD' }).format(value);
 
 const formatPercent = (value) => `${Number(value).toFixed(2)}%`;
 
@@ -27,10 +26,7 @@ const initRevenueCalculator = () => {
     const amountDisplay = form.querySelector('[data-share-amount]');
 
     const update = () => {
-        const { percentShare, shareAmount } = calculateRevenue(
-            totalPriceInput?.value,
-            teamMembersInput?.value,
-        );
+        const { percentShare, shareAmount } = calculateRevenue(totalPriceInput?.value, teamMembersInput?.value);
 
         if (percentDisplay) {
             percentDisplay.textContent = formatPercent(percentShare);

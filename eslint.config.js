@@ -38,6 +38,23 @@ export default [
         },
     },
     {
+        files: ['Modules/**/vite.config.js', 'vite-module-loader.js'],
+        languageOptions: {
+            globals: {
+                ...globals.node,
+            },
+        },
+    },
+    {
+        files: ['resources/js/tracker.js'],
+        languageOptions: {
+            globals: {
+                ...globals.browser,
+                Chart: 'readonly',
+            },
+        },
+    },
+    {
         ignores: ['vendor', 'node_modules', 'public', 'bootstrap/ssr', 'tailwind.config.js'],
     },
     prettier, // Turn off all rules that might conflict with Prettier
