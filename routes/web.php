@@ -1,14 +1,9 @@
 <?php
 
-use App\Http\Controllers\ProjectController;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
 
 Route::redirect('/', '/dashboard');
-
-Route::get('/dashboard', [ProjectController::class, 'dashboard'])->name('dashboard');
-Route::get('/projects/export', [ProjectController::class, 'export'])->name('projects.export');
-Route::resource('projects', ProjectController::class);
 
 Route::get('/welcome', function () {
     return Inertia::render('welcome');

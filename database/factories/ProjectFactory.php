@@ -2,10 +2,10 @@
 
 namespace Database\Factories;
 
-use App\Enums\ProjectStatus;
 use App\Models\Project;
-use App\Services\ProjectRevenueService;
 use Illuminate\Database\Eloquent\Factories\Factory;
+use Modules\Projects\Enums\ProjectStatus;
+use Modules\Projects\Services\ProjectRevenueService;
 
 /**
  * @extends Factory<Project>
