@@ -19,10 +19,10 @@
                     <tr class="hover:bg-gray-50 dark:hover:bg-gray-800/50">
                         <td class="whitespace-nowrap px-4 py-4 text-sm font-medium">{{ $project->project_name }}</td>
                         <td class="whitespace-nowrap px-4 py-4 text-sm text-gray-600 dark:text-gray-400">{{ $project->client_name }}</td>
-                        <td class="whitespace-nowrap px-4 py-4 text-sm">${{ number_format($project->total_price, 2) }}</td>
+                        <td class="whitespace-nowrap px-4 py-4 text-sm">₱{{ number_format($project->total_price, 2) }}</td>
                         <td class="hidden whitespace-nowrap px-4 py-4 text-sm md:table-cell">{{ $project->team_members }}</td>
                         <td class="hidden whitespace-nowrap px-4 py-4 text-sm lg:table-cell">{{ number_format($project->percent_share, 2) }}%</td>
-                        <td class="hidden whitespace-nowrap px-4 py-4 text-sm lg:table-cell">${{ number_format($project->share_amount, 2) }}</td>
+                        <td class="hidden whitespace-nowrap px-4 py-4 text-sm lg:table-cell">₱{{ number_format($project->share_amount, 2) }}</td>
                         <td class="hidden whitespace-nowrap px-4 py-4 text-sm text-gray-600 dark:text-gray-400 md:table-cell">{{ $project->displayDateCreated() }}</td>
                         <td class="whitespace-nowrap px-4 py-4">
                             <x-components::status-badge :status="$project->status" />

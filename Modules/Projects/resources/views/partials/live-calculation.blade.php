@@ -8,7 +8,7 @@
             </div>
             <div>
                 <dt class="text-sm text-gray-600 dark:text-gray-400">Share Amount</dt>
-                <dd data-share-amount class="mt-1 text-2xl font-bold text-blue-700 dark:text-blue-300">$0.00</dd>
+                <dd data-share-amount class="mt-1 text-2xl font-bold text-blue-700 dark:text-blue-300">₱0.00</dd>
             </div>
         </dl>
         <p class="mt-4 text-xs text-gray-500 dark:text-gray-400">Share = Total Price × (Percent Share ÷ 100)</p>

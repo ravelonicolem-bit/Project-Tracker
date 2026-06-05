@@ -3,7 +3,7 @@
     <dl class="mt-4 space-y-4">
         <div>
             <dt class="text-sm text-gray-500">Total Price</dt>
-            <dd class="text-2xl font-bold text-green-600 dark:text-green-400">${{ number_format($project->total_price, 2) }}</dd>
+            <dd class="text-2xl font-bold text-green-600 dark:text-green-400">₱{{ number_format($project->total_price, 2) }}</dd>
         </div>
         <div>
             <dt class="text-sm text-gray-500">Team Members</dt>

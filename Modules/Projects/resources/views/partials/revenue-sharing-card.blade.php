@@ -7,7 +7,7 @@
         </div>
         <div>
             <dt class="text-sm text-gray-600 dark:text-gray-400">Share Amount (per member)</dt>
-            <dd class="text-2xl font-bold text-blue-700 dark:text-blue-300">${{ number_format($project->share_amount, 2) }}</dd>
+            <dd class="text-2xl font-bold text-blue-700 dark:text-blue-300">₱{{ number_format($project->share_amount, 2) }}</dd>
         </div>
     </dl>
 </div>
