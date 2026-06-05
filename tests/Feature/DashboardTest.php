@@ -1,6 +1,7 @@
 <?php
 
 use App\Models\Project;
+use Modules\Projects\Enums\ProjectStatus;
 
 test('dashboard is publicly accessible', function () {
     $this->get('/dashboard')->assertOk();
@@ -9,7 +10,7 @@ test('dashboard is publicly accessible', function () {
 test('dashboard displays statistics', function () {
     Project::factory()->count(3)->create([
         'total_price' => 100000,
-        'status' => \App\Enums\ProjectStatus::Completed,
+        'status' => ProjectStatus::Completed,
     ]);
 
     $this->get('/dashboard')

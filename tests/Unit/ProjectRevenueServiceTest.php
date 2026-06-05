@@ -1,6 +1,6 @@
 <?php
 
-use App\Services\ProjectRevenueService;
+use Modules\Projects\Services\ProjectRevenueService;
 
 test('revenue service calculates percent share and share amount', function () {
     $result = (new ProjectRevenueService)->calculate(100000, 2);

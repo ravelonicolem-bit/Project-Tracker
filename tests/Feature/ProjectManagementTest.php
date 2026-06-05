@@ -1,10 +1,22 @@
 <?php
 
-use App\Enums\ProjectStatus;
 use App\Models\Project;
+use Modules\Projects\Enums\ProjectStatus;
 
 test('projects index page loads', function () {
     $this->get(route('projects.index'))->assertOk();
+});
+
+test('projects index renders status badges in table', function () {
+    $project = Project::factory()->create([
+        'status' => ProjectStatus::Completed,
+    ]);
+
+    $this->get(route('projects.index'))
+        ->assertOk()
+        ->assertSee($project->project_name)
+        ->assertSee('Completed', false)
+        ->assertSee('rounded-full', false);
 });
 
 test('project can be created with calculated revenue fields and manual date created', function () {

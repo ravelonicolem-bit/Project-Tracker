@@ -1,0 +1,7 @@
+{
+    "Dashboard": true,
+    "Crud": true,
+    "Components": true,
+    "Layouts": true,
+    "Projects": true
+}
