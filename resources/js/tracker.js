@@ -1,4 +1,4 @@
-const formatCurrency = (value) => new Intl.NumberFormat(undefined, { style: 'currency', currency: 'USD' }).format(value);
+const formatCurrency = (value) => new Intl.NumberFormat('en-PH', { style: 'currency', currency: 'PHP' }).format(value);
 
 const formatPercent = (value) => `${Number(value).toFixed(2)}%`;
 
